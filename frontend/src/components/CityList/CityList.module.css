@@ -1,0 +1,60 @@
+.li {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+}
+
+.li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../../public/location.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.span {
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.btnEdit,
+.btnDelete {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 40px;
+}
+
+.btnEdit {
+  background-color: #0a66c2;
+}
+
+.btnEdit:hover {
+  background-color: #004182;
+}
+
+.btnDelete {
+  background-color: #d64545;
+}
+
+.btnDelete:hover {
+  background-color: #af3838;
+}

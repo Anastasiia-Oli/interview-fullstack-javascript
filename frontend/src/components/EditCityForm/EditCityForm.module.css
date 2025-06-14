@@ -1,0 +1,49 @@
+.form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  width: 760px;
+}
+
+.input {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 240px;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.btnSave,
+.btnCancel {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 40px;
+}
+
+.btnSave {
+  background-color: #0a66c2;
+}
+
+.btnSave:hover {
+  background-color: #004182;
+}
+
+.btnCancel {
+  background-color: #d64545;
+}
+
+.btnCancel:hover {
+  background-color: #af3838;
+}
