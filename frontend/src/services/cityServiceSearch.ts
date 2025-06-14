@@ -15,7 +15,6 @@ async function fetchCities(
   const response = await axios.get<CitiesHttpResponse>(BASE_URL, {
     params: { search: query, page: page },
   });
-  console.log(response.data);
   return response.data;
 }
 
