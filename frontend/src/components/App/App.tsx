@@ -15,7 +15,7 @@ import deleteCity from "../../services/cityServiceDelete";
 import AddCityForm from "../AddCityForm/AddCityForm";
 import postCity from "../../services/cityServiceCreate";
 
-const notify = () => toast("No movies found for your request.");
+const notify = () => toast("No cities found for your request.");
 
 function App() {
   const [query, setQuery] = useState("");
@@ -32,6 +32,16 @@ function App() {
   const handleSearch = (searchQuery: string) => {
     setQuery(searchQuery);
     setPage(1);
+  };
+
+  const handleDelete = async (id: string) => {
+    try {
+      await deleteCity(id);
+      toast.success("City deleted");
+      refetch();
+    } catch (error) {
+      toast.error("Error deleting city");
+    }
   };
 
   const handleEditSubmit = async (updatedCity: City) => {
@@ -94,7 +104,7 @@ function App() {
           onEdit={(city) => setChosenCity(city)}
           onEditSubmit={handleEditSubmit}
           onCancelEdit={handleCancelEdit}
-          onDelete={(id) => deleteCity(id)}
+          onDelete={handleDelete}
         />
       )}
       <AddCityForm addOnSubmit={handleAddSubmit} />
